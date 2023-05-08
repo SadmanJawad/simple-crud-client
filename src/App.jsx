@@ -1,6 +1,7 @@
 import "./App.css";
 
 function App() {
+
   const handleAddUser = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -19,8 +20,10 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.insertdId){
-          alert('Users added succesfully')
+        if(data.insertedId){
+          alert('Users added successfully')
+          form.reset();
+          
         }
       });
   };
