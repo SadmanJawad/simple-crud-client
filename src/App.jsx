@@ -10,6 +10,7 @@ function App() {
     const user = { name, email };
     console.log(user);
 
+    //create
     fetch("http://localhost:5000/users", {
       method: 'POST',
       headers:{
@@ -23,7 +24,7 @@ function App() {
         if(data.insertedId){
           alert('Users added successfully')
           form.reset();
-          
+
         }
       });
   };
